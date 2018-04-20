@@ -1,4 +1,5 @@
 const path = require('path');
+var webpack = require("webpack");
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var UglifyJsPlugin = require('webpack/lib/optimize/UglifyJsPlugin');
@@ -47,6 +48,10 @@ module.exports = {
           mangle: { screw_ie8 : true },
           compress: { screw_ie8: true, warnings: false },
           comments: false
+      }),
+      new webpack.ProvidePlugin({
+          $: "jquery",
+          jQuery: "jquery"
       }),
       new CommonsChunkPlugin({
           name: "vendor",
