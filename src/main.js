@@ -6,7 +6,8 @@ import 'fullpage.js/dist/jquery.fullpage.js';
 import ScrollReveal from 'scrollreveal';
 
 
-window.sr = ScrollReveal()
+window.sr = ScrollReveal();
+window.sr.reveal('.box-img', { duration: 4000 });
 window.sr.reveal('.box', { duration: 1000 });
 
 $(document).ready(function() {

@@ -12,6 +12,7 @@ body {
 
 
 .box {
+  position: relative;
   display: block;
   font-family: sans-serif;
   // background-color: lightblue;
@@ -24,6 +25,16 @@ body {
   // background-color: lightblue;
   padding: 50px;
   color: white;
+  overflow: hidden;
+}
+
+.img-article {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
 }
 
 
